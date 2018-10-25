@@ -24,17 +24,17 @@ class Body extends Component {
         this.handleResize();
         window.addEventListener('resize', this.handleResize)
 
-      fetch("https://api.gios.gov.pl/pjp-api/rest/aqindex/getIndex/550")
-      .then((res) => {
-       return res.json()
-      }).then((res) => {
-       this.setState({
-         post: res
-       })
-       console.log(res)
-      }).catch((error) => {
-       console.log(error);
-      })
+      // fetch("https://api.gios.gov.pl/pjp-api/rest/aqindex/getIndex/550")
+      // .then((res) => {
+      //  return res.json()
+      // }).then((res) => {
+      //  this.setState({
+      //    post: res
+      //  })
+      //  console.log(res)
+      // }).catch((error) => {
+      //  console.log(error);
+      // })
 
      db.collection('quotes').get().then((snap) => {
         snap.docs.forEach((e) => {
@@ -73,11 +73,11 @@ class Body extends Component {
                 
 
               /////////////Dane z GIOŚ - jakość powietrza  
-                 if(!this.state.post) {
-                 return <h1>Loading ... </h1>
-                 }
-                console.log(this.state.post.pm10IndexLevel.indexLevelName);
-        let apiAnswer = this.state.post.pm10IndexLevel.indexLevelName;
+                //  if(!this.state.post) {
+                //  return <h1>Loading ... </h1>
+                //  }
+                // console.log(this.state.post.pm10IndexLevel.indexLevelName);
+        let apiAnswer = "Dobry"//this.state.post.pm10IndexLevel.indexLevelName;
 
         let allertBlue = () => {
         switch(apiAnswer){
