@@ -24,6 +24,7 @@ class Body extends Component {
         this.handleResize();
         window.addEventListener('resize', this.handleResize)
 
+         /////////////Dane z GIOŚ - jakość powietrza są chwilowo zakomentowane z powodu utrudnień urzędu w //dostępie do pomiarów PM10 z danych stacji 
       // fetch("https://api.gios.gov.pl/pjp-api/rest/aqindex/getIndex/550")
       // .then((res) => {
       //  return res.json()
@@ -72,7 +73,7 @@ class Body extends Component {
                 let randomQoutes = valuesQuotes[Math.floor(Math.random()*valuesQuotes.length)]
                 
 
-              /////////////Dane z GIOŚ - jakość powietrza  
+              /////////////Dane z GIOŚ - jakość powietrza są chwilowo zakomentowane z powodu utrudnień urzędu w //dostępie do pomiarów PM10 z danych stacji 
                 //  if(!this.state.post) {
                 //  return <h1>Loading ... </h1>
                 //  }
